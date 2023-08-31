@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('background.jpg'); /* Set your background image here */
+            background-size: cover;
+            font-family: 'Noto Serif', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2); /* Glass morphism background color with transparency */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            vertical-align: middle;
+        }
+        
+        input[type="text"],
+        input[type="password"], 
+        textarea,
+input[name="State"]{
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            background: rgba(255, 255, 255, 0.2); /* Glass morphism input field background color with transparency */
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #3498db; /* Blue submit button color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Additional styles for fonts */
+        td {
+            padding-right: 10px;
+            text-align: centerX;
+        }
+
+        font {
+            font-size: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+	
+    <div class="container">
+        <form action="loginfunction" method="post">
+            <table>
+                <tr>
+                    <td><font face="Noto Serif">Name:</font></td>
+                    <td><input type="text" name="userName"></td>
+                </tr>
+                <tr>
+                    <td><font face="Noto Serif">Password:</font></td>
+                    <td><input type="text" name="userPassword"></td>
+                </tr>
+                <tr>
+                    <td><font face="Noto Serif">Address:</font></td>
+                    <td><textarea name="message" rows="10" cols="30""></textarea></td>
+                </tr>
+                <tr>
+					<td><font face="Noto Serif">State: </font></td>
+					<td>
+                  <input list="State" name = "State" >
+  <datalist id="State">
+    <option value="Karnataka">
+    <option value="Pondicherry">
+    <option value="Kerala">
+    <option value="Tamilnadu">
+    <option value="Andhra Pradesh">
+  </datalist>
+  </td>
+                </tr>
+                <tr>
+					<td><p>Please select your Qualification:</p></td>
+ 					<td> <input type="radio" id="qualification1" name="qualification" value="Under Graduate">
+  					<label for="qualification1">Under Graduate</label><br>
+ 					<input type="radio" id="qualification2" name="qualification" value="Post Graduate">
+  					<label for="qualification2">Post Graduate</label><br> </td>
+				</tr>
+				<tr>
+					<td>Skills:</td>
+					<td>
+	<input type="checkbox" id="skill" name="skill" value="Java">
+  <label for="skill1"> Java</label>
+  <input type="checkbox"  name="skill" value="Advanced Java">
+  <label for="skill2"> Advanced Java</label>
+  <input type="checkbox" name="skill" value="Python">
+  <label for="skill3"> Python</label>
+  <input type="checkbox" name="skill" value="Web Programming">
+  <label for="skill4"> Web Programming</label>
+					</td>
+				</tr>
+            </table>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('background.jpg'); /* Set your background image here */
+            background-size: cover;
+            font-family: 'Noto Serif', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2); /* Glass morphism background color with transparency */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            background: rgba(255, 255, 255, 0.2); /* Glass morphism input field background color with transparency */
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #3498db; /* Blue submit button color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Additional styles for fonts */
+        td {
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        font {
+            font-size: 16px;
+        }
+        .moving-heading {
+            font-size: 24px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: top 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+	 <div class="moving-heading">Naveen</div>
+    <div class="container">
+        <form action="loginfunction" method="post">
+            <table>
+                <tr>
+                    <td><font face="Noto Serif">Name:</font></td>
+                    <td><input type="text" name="userName"></td>
+                </tr>
+                <tr>
+                    <td><font face="Noto Serif">Password:</font></td>
+                    <td><input type="password" name="userPassword"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    
+    <script>
+        // JavaScript to make the heading move on scroll
+        window.addEventListener('scroll', function() {
+            var heading = document.querySelector('.moving-heading');
+            if (window.scrollY > 50) {
+                heading.style.top = '10px'; // Adjust the top position as needed
+            } else {
+                heading.style.top = '0';
+            }
+        });
+    </script>
+    
+</body>
+</html>
